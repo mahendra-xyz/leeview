@@ -37,11 +37,13 @@ export const metadata: Metadata = {
     description:
       "Local, reliable property maintenance in Ballincollig and across Cork. Painting, garden maintenance, pressure washing, fencing and more. Free no-obligation quote.",
     locale: "en_IE",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Leeview Property Maintenance" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Leeview Property Maintenance | Cork",
     description: "Local property maintenance in Cork. Free no-obligation quotes.",
+    images: ["/opengraph-image"],
   },
   alternates: {
     canonical: SITE_URL,
