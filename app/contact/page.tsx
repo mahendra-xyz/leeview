@@ -33,6 +33,7 @@ export default function ContactPage() {
           }}
         />
         <div className="absolute left-0 top-0 bottom-0 w-1" style={{ backgroundColor: "var(--green)" }} />
+        <div className="absolute right-0 top-0 bottom-0 w-1" style={{ backgroundColor: "var(--green)" }} />
 
         <div className="relative max-w-6xl mx-auto px-6 sm:px-10">
           <div className="flex items-center gap-3 mb-4">

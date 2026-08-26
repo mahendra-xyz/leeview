@@ -1,5 +1,7 @@
 import { services } from "@/lib/services";
+import { getServiceImages } from "@/lib/images";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Services() {
   return (
@@ -30,43 +32,77 @@ export default function Services() {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-gray-100">
-          {services.map(({ icon: Icon, title, tagline, slug }, i) => (
-            <Link
-              key={slug}
-              href={`/services/${slug}`}
-              className="group bg-white p-8 hover:bg-gray-50 transition-colors duration-200"
-            >
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0">
-                  <span
-                    className="text-2xl leading-none block mb-4 font-bold tabular-nums"
-                    style={{ fontFamily: "var(--font-bebas)", color: "var(--navy)", opacity: 0.2, letterSpacing: "0.02em" }}
-                  >
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <div
-                    className="w-10 h-10 flex items-center justify-center rounded-sm"
-                    style={{ backgroundColor: "var(--light)" }}
-                  >
-                    <Icon size={18} style={{ color: "var(--navy)" }} />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {services.map(({ icon: Icon, title, tagline, slug }, i) => {
+            const img = getServiceImages(slug)[0];
+            return (
+              <Link
+                key={slug}
+                href={`/services/${slug}`}
+                className="group relative overflow-hidden rounded-sm"
+                style={{ minHeight: "260px" }}
+              >
+                {/* Background image */}
+                {img && (
+                  <Image
+                    src={img.url}
+                    alt={img.alt}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                )}
+
+                {/* Dark overlay — lightens on hover */}
+                <div
+                  className="absolute inset-0 transition-opacity duration-300"
+                  style={{ backgroundColor: "rgba(12,31,61,0.65)" }}
+                />
+                <div
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  style={{ backgroundColor: "rgba(12,31,61,0.45)" }}
+                />
+
+                {/* Green bottom bar */}
+                <div
+                  className="absolute bottom-0 left-0 right-0 h-0.5 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
+                  style={{ backgroundColor: "var(--green)" }}
+                />
+
+                {/* Content */}
+                <div className="relative h-full flex flex-col justify-between p-6" style={{ minHeight: "260px" }}>
+                  {/* Number + icon */}
+                  <div className="flex items-center justify-between">
+                    <span
+                      className="text-4xl leading-none font-bold"
+                      style={{ fontFamily: "var(--font-bebas)", color: "rgba(255,255,255,0.2)", letterSpacing: "0.02em" }}
+                    >
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <div
+                      className="w-9 h-9 flex items-center justify-center rounded-sm"
+                      style={{ backgroundColor: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.15)" }}
+                    >
+                      <Icon size={16} color="#7ec87e" />
+                    </div>
+                  </div>
+
+                  {/* Title + tagline */}
+                  <div>
+                    <h3
+                      className="text-white font-bold text-base mb-1 leading-snug"
+                    >
+                      {title}
+                    </h3>
+                    <p className="text-white/60 text-xs leading-relaxed">{tagline}</p>
                   </div>
                 </div>
-                <div className="pt-8">
-                  <h3 className="font-bold text-gray-900 text-sm mb-1.5 leading-snug group-hover:underline">{title}</h3>
-                  <p className="text-gray-400 text-xs leading-relaxed">{tagline}</p>
-                </div>
-              </div>
-              <div
-                className="mt-6 h-0.5 w-0 group-hover:w-full transition-all duration-300"
-                style={{ backgroundColor: "var(--green)" }}
-              />
-            </Link>
-          ))}
+              </Link>
+            );
+          })}
         </div>
 
         {/* CTA */}
-        <div className="mt-12 flex flex-col sm:flex-row items-center justify-between gap-4 p-8 border border-gray-100 bg-gray-50">
+        <div className="mt-10 flex flex-col sm:flex-row items-center justify-between gap-4 p-8 border border-gray-100 bg-gray-50">
           <div>
             <p className="font-bold text-gray-900 text-sm">Don't see what you need?</p>
             <p className="text-gray-500 text-xs mt-0.5">We handle a wide range of jobs — just ask.</p>

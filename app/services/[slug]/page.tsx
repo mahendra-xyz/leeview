@@ -1,10 +1,12 @@
 import { notFound } from "next/navigation";
 import { getService, services } from "@/lib/services";
+import { getServiceImages } from "@/lib/images";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ServiceContactForm from "@/components/ServiceContactForm";
 import { ArrowLeft, CheckCircle } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import { SITE_URL, SITE_NAME, PHONE, ADDRESS } from "@/lib/constants";
 
@@ -42,6 +44,7 @@ export default async function ServicePage({ params }: Props) {
   if (!service) notFound();
 
   const Icon = service.icon;
+  const galleryImages = getServiceImages(slug);
 
   const serviceSchema = {
     "@context": "https://schema.org",
@@ -87,6 +90,7 @@ export default async function ServicePage({ params }: Props) {
           }}
         />
         <div className="absolute left-0 top-0 bottom-0 w-1" style={{ backgroundColor: "var(--green)" }} />
+        <div className="absolute right-0 top-0 bottom-0 w-1" style={{ backgroundColor: "var(--green)" }} />
 
         <div className="relative max-w-6xl mx-auto px-6 sm:px-10">
           {/* Back link */}
@@ -170,20 +174,15 @@ export default async function ServicePage({ params }: Props) {
                   </span>
                 </div>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                  {Array.from({ length: service.gallery }).map((_, i) => (
-                    <div
-                      key={i}
-                      className="aspect-square rounded-sm flex items-end p-2"
-                      style={{
-                        background: "linear-gradient(160deg, #e8edf5 0%, #d0d9e8 100%)",
-                        border: "1px solid #e5e7eb",
-                      }}
-                    >
-                      <span className="text-[9px] font-bold uppercase tracking-wider text-gray-400">Photo {i + 1}</span>
+                  {galleryImages.map((img, i) => (
+                    <div key={i} className="aspect-square relative rounded-sm overflow-hidden border border-gray-100">
+                      <Image src={img.url} alt={img.alt} fill className="object-cover hover:scale-105 transition-transform duration-300" />
                     </div>
                   ))}
                 </div>
-                <p className="text-xs text-gray-400 mt-3">Photos of completed work will appear here.</p>
+                {galleryImages.length === 0 && (
+                  <p className="text-xs text-gray-400">Photos of completed work coming soon.</p>
+                )}
               </div>
             </div>
 
