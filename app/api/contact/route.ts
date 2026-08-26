@@ -51,7 +51,7 @@ ${message}
     // Email to Patrick (business email + gmail)
     await transporter.sendMail({
       from: `"Leeview Website" <${process.env.SMTP_USER}>`,
-      to: "patrick@leeviewpropertymaintenance.ie, Property.maintain1@gmail.com",
+      to: "patrick.leeview@gmail.com",
       replyTo: email,
       subject: `New Quote Request from ${name}`,
       text: emailBody,
