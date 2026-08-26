@@ -1,10 +1,11 @@
 "use client";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Send, CheckCircle, Phone } from "lucide-react";
 
 export default function ServiceContactForm({ service }: { service: string }) {
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const loadedAt = useRef(Date.now());
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -13,7 +14,12 @@ export default function ServiceContactForm({ service }: { service: string }) {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...form, message: `[${service}]\n\n${form.message}` }),
+        body: JSON.stringify({
+          ...form,
+          message: `[${service}]\n\n${form.message}`,
+          _honey: "",
+          _ts: loadedAt.current,
+        }),
       });
       setStatus(res.ok ? "success" : "error");
       if (res.ok) setForm({ name: "", email: "", phone: "", message: "" });
