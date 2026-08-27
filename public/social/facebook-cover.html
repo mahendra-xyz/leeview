@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Bebas+Neue&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { min-height: 100%; display: flex; align-items: center; justify-content: center; background: #111; padding: 40px; }
+  body { width: 820px; height: 312px; overflow: hidden; background: #0c1f3d; font-family: 'Inter', sans-serif; flex-shrink: 0; }
+
+  .wrap {
+    width: 820px;
+    height: 312px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(120deg, #0c1f3d 0%, #1B3461 60%, #0f2a4a 100%);
+    overflow: hidden;
+  }
+
+  /* Grid texture */
+  .grid {
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  /* Green bars */
+  .bar-left  { position: absolute; left: 0; top: 0; bottom: 0; width: 5px; background: #2F7A2F; }
+  .bar-right { position: absolute; right: 0; top: 0; bottom: 0; width: 5px; background: #2F7A2F; }
+  .bar-bottom { position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: #2F7A2F; }
+
+  /* Decorative circle */
+  .circle {
+    position: absolute;
+    right: -60px;
+    top: -80px;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    border: 40px solid rgba(47, 122, 47, 0.08);
+  }
+  .circle2 {
+    position: absolute;
+    right: 60px;
+    bottom: -120px;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    border: 30px solid rgba(255,255,255,0.03);
+  }
+
+  .content {
+    position: relative;
+    padding: 0 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .eyebrow-line { width: 24px; height: 2px; background: #2F7A2F; }
+
+  .eyebrow-text {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #7ec87e;
+  }
+
+  .logo-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 72px;
+    color: #fff;
+    letter-spacing: 0.03em;
+    line-height: 1;
+  }
+
+  .logo-sub {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #7ec87e;
+    margin-top: -4px;
+  }
+
+  .tagline {
+    font-size: 15px;
+    color: rgba(255,255,255,0.55);
+    font-weight: 400;
+    margin-top: 4px;
+    max-width: 380px;
+    line-height: 1.5;
+  }
+
+  .tags {
+    display: flex;
+    gap: 8px;
+    margin-top: 6px;
+  }
+
+  .tag {
+    padding: 4px 12px;
+    border: 1px solid rgba(255,255,255,0.15);
+    font-size: 10px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.05em;
+  }
+
+  /* Right side — phone */
+  .right {
+    position: absolute;
+    right: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: right;
+  }
+
+  .phone-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #7ec87e;
+    margin-bottom: 6px;
+  }
+
+  .phone {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px;
+    color: #fff;
+    letter-spacing: 0.04em;
+  }
+
+  .website {
+    font-size: 11px;
+    color: rgba(255,255,255,0.35);
+    margin-top: 6px;
+    letter-spacing: 0.05em;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="grid"></div>
+  <div class="bar-left"></div>
+  <div class="bar-right"></div>
+  <div class="bar-bottom"></div>
+  <div class="circle"></div>
+  <div class="circle2"></div>
+
+  <div class="content">
+    <div class="eyebrow">
+      <div class="eyebrow-line"></div>
+      <span class="eyebrow-text">Cork &amp; Surrounding Areas</span>
+    </div>
+    <div class="logo-name">Leeview</div>
+    <div class="logo-sub">Property Maintenance</div>
+    <div class="tagline">Keeping your property looking its best — every time.</div>
+    <div class="tags">
+      <div class="tag">Local</div>
+      <div class="tag">Reliable</div>
+      <div class="tag">Fully Insured</div>
+    </div>
+  </div>
+
+  <div class="right">
+    <div class="phone-label">Call Us</div>
+    <div class="phone">085 181 8163</div>
+    <div class="website">leeviewpropertymaintenance.ie</div>
+  </div>
+</div>
+</body>
+</html>

@@ -59,9 +59,9 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="mailto:patrick@leeviewpropertymaintenance.ie" className="flex items-center gap-3 text-xs text-blue-200 hover:text-white transition-colors">
+                <a href="mailto:patrick.leeview@gmail.com" className="flex items-center gap-3 text-xs text-blue-200 hover:text-white transition-colors">
                   <Mail size={13} className="flex-shrink-0" style={{ color: "#7ec87e" }} />
-                  patrick@leeviewpropertymaintenance.ie
+                  patrick.leeview@gmail.com
                 </a>
               </li>
               <li>

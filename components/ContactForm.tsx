@@ -199,50 +199,50 @@ export default function ContactForm() {
   const { form, setForm, status, setStatus, errorMsg, handleSubmit } = useForm();
 
   return (
-    <section id="contact-us" style={{ backgroundColor: "var(--light)" }} className="py-20">
+    <section id="contact-us" style={{ backgroundColor: "#0a1829" }} className="py-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-14">
-          <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: "var(--green)" }}>Get In Touch</p>
-          <h2 className="text-5xl sm:text-6xl leading-none" style={{ fontFamily: "var(--font-bebas)", color: "var(--navy)", letterSpacing: "0.02em" }}>
+          <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: "#7ec87e" }}>Get In Touch</p>
+          <h2 className="text-5xl sm:text-6xl leading-none text-white" style={{ fontFamily: "var(--font-bebas)", letterSpacing: "0.02em" }}>
             Request a Free Quote
           </h2>
-          <p className="mt-3 text-gray-500 max-w-xl mx-auto text-sm leading-relaxed">No obligation. We'll get back to you as soon as possible.</p>
+          <p className="mt-3 max-w-xl mx-auto text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.45)" }}>No obligation. We'll get back to you as soon as possible.</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-10">
           <div className="lg:col-span-2 space-y-6">
             <div className="space-y-4">
               <a href="tel:+353851818163" className="flex items-center gap-3 group">
-                <div className="w-10 h-10 flex items-center justify-center flex-shrink-0" style={{ backgroundColor: "var(--navy)", color: "#fff" }}>
-                  <Phone size={16} />
+                <div className="w-10 h-10 flex items-center justify-center flex-shrink-0" style={{ backgroundColor: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)" }}>
+                  <Phone size={16} color="#7ec87e" />
                 </div>
                 <div>
-                  <p className="text-xs text-gray-400 uppercase font-semibold tracking-wide">Phone</p>
-                  <p className="text-sm font-bold text-gray-800 group-hover:underline">085 181 8163</p>
+                  <p className="text-xs uppercase font-semibold tracking-wide" style={{ color: "rgba(255,255,255,0.4)" }}>Phone</p>
+                  <p className="text-sm font-bold text-white group-hover:underline">085 181 8163</p>
                 </div>
               </a>
-              <a href="mailto:patrick@leeviewpropertymaintenance.ie" className="flex items-center gap-3 group">
-                <div className="w-10 h-10 flex items-center justify-center flex-shrink-0" style={{ backgroundColor: "var(--navy)", color: "#fff" }}>
-                  <Mail size={16} />
+              <a href="mailto:patrick.leeview@gmail.com" className="flex items-center gap-3 group">
+                <div className="w-10 h-10 flex items-center justify-center flex-shrink-0" style={{ backgroundColor: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)" }}>
+                  <Mail size={16} color="#7ec87e" />
                 </div>
                 <div>
-                  <p className="text-xs text-gray-400 uppercase font-semibold tracking-wide">Email</p>
-                  <p className="text-sm font-bold text-gray-800 group-hover:underline">patrick@leeviewpropertymaintenance.ie</p>
+                  <p className="text-xs uppercase font-semibold tracking-wide" style={{ color: "rgba(255,255,255,0.4)" }}>Email</p>
+                  <p className="text-sm font-bold text-white group-hover:underline">patrick.leeview@gmail.com</p>
                 </div>
               </a>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 flex items-center justify-center flex-shrink-0" style={{ backgroundColor: "var(--navy)", color: "#fff" }}>
-                  <MapPin size={16} />
+                <div className="w-10 h-10 flex items-center justify-center flex-shrink-0" style={{ backgroundColor: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)" }}>
+                  <MapPin size={16} color="#7ec87e" />
                 </div>
                 <div>
-                  <p className="text-xs text-gray-400 uppercase font-semibold tracking-wide">Location</p>
-                  <p className="text-sm font-bold text-gray-800">Ballincollig, Co. Cork</p>
+                  <p className="text-xs uppercase font-semibold tracking-wide" style={{ color: "rgba(255,255,255,0.4)" }}>Location</p>
+                  <p className="text-sm font-bold text-white">Ballincollig, Co. Cork</p>
                 </div>
               </div>
             </div>
-            <div className="p-4 border-l-4" style={{ borderColor: "var(--green)", backgroundColor: "#f0faf0" }}>
-              <p className="text-sm font-bold text-gray-800 mb-1">Quality Work You Can Rely On</p>
-              <p className="text-xs text-gray-500 leading-relaxed">Exceptional attention to detail — every time.</p>
+            <div className="p-4 border-l-4" style={{ borderColor: "var(--green)", backgroundColor: "rgba(47,122,47,0.12)" }}>
+              <p className="text-sm font-bold text-white mb-1">Quality Work You Can Rely On</p>
+              <p className="text-xs leading-relaxed" style={{ color: "rgba(255,255,255,0.5)" }}>Exceptional attention to detail — every time.</p>
             </div>
           </div>
 

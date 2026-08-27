@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Bebas+Neue&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { min-height: 100%; display: flex; align-items: center; justify-content: center; background: #111; padding: 40px; }
+  body { width: 1192px; height: 360px; overflow: hidden; font-family: 'Inter', sans-serif; flex-shrink: 0; }
+
+  .wrap {
+    width: 1192px;
+    height: 360px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(130deg, #0a1a30 0%, #1B3461 55%, #0c2545 100%);
+    overflow: hidden;
+  }
+
+  .grid {
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  .bar-left   { position: absolute; left: 0; top: 0; bottom: 0; width: 6px; background: #2F7A2F; }
+  .bar-right  { position: absolute; right: 0; top: 0; bottom: 0; width: 6px; background: #2F7A2F; }
+  .bar-top    { position: absolute; top: 0; left: 0; right: 0; height: 4px; background: #2F7A2F; }
+  .bar-bottom { position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: #2F7A2F; }
+
+  .circle {
+    position: absolute;
+    right: -80px;
+    top: -100px;
+    width: 440px;
+    height: 440px;
+    border-radius: 50%;
+    border: 60px solid rgba(47,122,47,0.07);
+  }
+
+  .circle2 {
+    position: absolute;
+    right: 200px;
+    bottom: -160px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 40px solid rgba(255,255,255,0.025);
+  }
+
+  .content {
+    position: relative;
+    padding: 0 80px;
+    flex: 1;
+  }
+
+  .eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+  .eyebrow-line { width: 28px; height: 2px; background: #2F7A2F; }
+  .eyebrow-text {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #7ec87e;
+  }
+
+  .logo-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 96px;
+    color: #fff;
+    letter-spacing: 0.03em;
+    line-height: 1;
+  }
+
+  .logo-sub {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #7ec87e;
+    margin-top: -2px;
+    margin-bottom: 14px;
+  }
+
+  .tagline {
+    font-size: 16px;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.5;
+    max-width: 420px;
+  }
+
+  .divider { width: 1px; height: 200px; background: rgba(255,255,255,0.08); margin: 0 60px; }
+
+  .right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-right: 80px;
+  }
+
+  .info-block {}
+  .info-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #7ec87e;
+    margin-bottom: 4px;
+  }
+  .info-value {
+    font-size: 15px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.85);
+  }
+  .info-value.large {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 30px;
+    letter-spacing: 0.04em;
+    color: #fff;
+  }
+
+  .tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 4px;
+  }
+  .tag {
+    padding: 4px 12px;
+    border: 1px solid rgba(255,255,255,0.15);
+    font-size: 10px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.45);
+    letter-spacing: 0.05em;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="grid"></div>
+  <div class="bar-left"></div>
+  <div class="bar-right"></div>
+  <div class="bar-top"></div>
+  <div class="bar-bottom"></div>
+  <div class="circle"></div>
+  <div class="circle2"></div>
+
+  <div class="content">
+    <div class="eyebrow">
+      <div class="eyebrow-line"></div>
+      <span class="eyebrow-text">Cork &amp; Surrounding Areas</span>
+    </div>
+    <div class="logo-name">Leeview</div>
+    <div class="logo-sub">Property Maintenance</div>
+    <div class="tagline">Keeping your property looking its best — every time.</div>
+    <div class="tags" style="margin-top:16px;">
+      <div class="tag">Local</div>
+      <div class="tag">Reliable</div>
+      <div class="tag">Fully Insured</div>
+      <div class="tag">Professional</div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="right">
+    <div class="info-block">
+      <div class="info-label">Call Us</div>
+      <div class="info-value large">085 181 8163</div>
+    </div>
+    <div class="info-block">
+      <div class="info-label">Website</div>
+      <div class="info-value">leeviewpropertymaintenance.ie</div>
+    </div>
+    <div class="info-block">
+      <div class="info-label">Location</div>
+      <div class="info-value">Ballincollig, Co. Cork</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

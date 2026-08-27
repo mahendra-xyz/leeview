@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ContactFormOnly } from "@/components/ContactForm";
+import StatsBar from "@/components/StatsBar";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import type { Metadata } from "next";
 
@@ -81,13 +82,13 @@ export default function ContactPage() {
                     </a>
                   </li>
                   <li>
-                    <a href="mailto:patrick@leeviewpropertymaintenance.ie" className="flex items-start gap-4 group">
+                    <a href="mailto:patrick.leeview@gmail.com" className="flex items-start gap-4 group">
                       <div className="w-10 h-10 rounded-sm flex items-center justify-center flex-shrink-0" style={{ backgroundColor: "var(--navy)", color: "#fff" }}>
                         <Mail size={16} />
                       </div>
                       <div>
                         <p className="text-[10px] font-bold uppercase tracking-wider text-gray-400 mb-0.5">Email</p>
-                        <p className="text-sm font-bold text-gray-900 group-hover:underline break-all">patrick@leeviewpropertymaintenance.ie</p>
+                        <p className="text-sm font-bold text-gray-900 group-hover:underline break-all">patrick.leeview@gmail.com</p>
                       </div>
                     </a>
                   </li>
@@ -134,6 +135,8 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      <StatsBar />
 
       {/* Map */}
       <section>
