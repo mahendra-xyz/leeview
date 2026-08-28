@@ -10,3 +10,10 @@ export const ADDRESS = {
   country: "Ireland",
   full: "Ballincollig, Co. Cork, Ireland",
 };
+
+// Social & review links — update these with real URLs
+export const SOCIALS = {
+  facebook: "https://www.facebook.com/profile.php?id=61593635473473",
+  instagram: "https://www.instagram.com/leeview.property.maintenance/",
+  googleReview: "https://g.page/r/PLACEHOLDER/review", // TODO: replace with real Google Place review link
+};

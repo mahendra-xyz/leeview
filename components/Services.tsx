@@ -33,8 +33,11 @@ export default function Services() {
 
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {services.map(({ icon: Icon, title, tagline, slug }, i) => {
-            const img = getServiceImages(slug)[0];
+          {(() => {
+            const usedUrls = new Set<string>();
+            return services.map(({ icon: Icon, title, tagline, slug }, i) => {
+            const img = getServiceImages(slug).find(im => !usedUrls.has(im.url));
+            if (img) usedUrls.add(img.url);
             return (
               <Link
                 key={slug}
@@ -52,14 +55,14 @@ export default function Services() {
                   />
                 )}
 
-                {/* Dark overlay — lightens on hover */}
+                {/* Dark overlay — stronger at bottom for text legibility */}
                 <div
-                  className="absolute inset-0 transition-opacity duration-300"
-                  style={{ backgroundColor: "rgba(12,31,61,0.65)" }}
+                  className="absolute inset-0"
+                  style={{ background: "linear-gradient(to bottom, rgba(12,31,61,0.45) 0%, rgba(12,31,61,0.85) 100%)" }}
                 />
                 <div
                   className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                  style={{ backgroundColor: "rgba(12,31,61,0.45)" }}
+                  style={{ background: "linear-gradient(to bottom, rgba(12,31,61,0.3) 0%, rgba(12,31,61,0.75) 100%)" }}
                 />
 
                 {/* Green bottom bar */}
@@ -89,16 +92,18 @@ export default function Services() {
                   {/* Title + tagline */}
                   <div>
                     <h3
-                      className="text-white font-bold text-base mb-1 leading-snug"
+                      className="text-white font-bold text-lg mb-1.5 leading-snug"
+                      style={{ textShadow: "0 1px 4px rgba(0,0,0,0.5)" }}
                     >
                       {title}
                     </h3>
-                    <p className="text-white/60 text-xs leading-relaxed">{tagline}</p>
+                    <p className="text-white/80 text-sm leading-relaxed" style={{ textShadow: "0 1px 3px rgba(0,0,0,0.4)" }}>{tagline}</p>
                   </div>
                 </div>
               </Link>
             );
-          })}
+          });
+          })()}
         </div>
 
         {/* CTA */}

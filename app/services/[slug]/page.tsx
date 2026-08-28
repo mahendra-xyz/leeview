@@ -1,12 +1,13 @@
 import { notFound } from "next/navigation";
 import { getService, services } from "@/lib/services";
-import { getServiceImages } from "@/lib/images";
+import { getRealServiceImages } from "@/lib/images";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ServiceContactForm from "@/components/ServiceContactForm";
 import { ArrowLeft, CheckCircle } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import ImageGallery from "@/components/ImageGallery";
 import type { Metadata } from "next";
 import { SITE_URL, SITE_NAME, PHONE, ADDRESS } from "@/lib/constants";
 
@@ -44,7 +45,7 @@ export default async function ServicePage({ params }: Props) {
   if (!service) notFound();
 
   const Icon = service.icon;
-  const galleryImages = getServiceImages(slug);
+  const galleryImages = getRealServiceImages(slug);
 
   const serviceSchema = {
     "@context": "https://schema.org",
@@ -166,24 +167,17 @@ export default async function ServicePage({ params }: Props) {
               </div>
 
               {/* Gallery */}
-              <div>
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="h-px w-6" style={{ backgroundColor: "var(--green)" }} />
-                  <span className="text-xs font-bold uppercase tracking-[0.2em]" style={{ color: "var(--green)" }}>
-                    Our Work
-                  </span>
+              {galleryImages.length > 0 && (
+                <div>
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="h-px w-6" style={{ backgroundColor: "var(--green)" }} />
+                    <span className="text-xs font-bold uppercase tracking-[0.2em]" style={{ color: "var(--green)" }}>
+                      Our Work
+                    </span>
+                  </div>
+                  <ImageGallery images={galleryImages} />
                 </div>
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                  {galleryImages.map((img, i) => (
-                    <div key={i} className="aspect-square relative rounded-sm overflow-hidden border border-gray-100">
-                      <Image src={img.url} alt={img.alt} fill className="object-cover hover:scale-105 transition-transform duration-300" />
-                    </div>
-                  ))}
-                </div>
-                {galleryImages.length === 0 && (
-                  <p className="text-xs text-gray-400">Photos of completed work coming soon.</p>
-                )}
-              </div>
+              )}
             </div>
 
             {/* Right — Sticky contact form */}

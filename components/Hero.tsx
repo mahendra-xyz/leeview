@@ -131,7 +131,7 @@ export default function Hero() {
                         src={img.url}
                         alt={img.alt}
                         fill
-                        className="object-cover"
+                        className={img.fit === "contain" ? "object-contain" : "object-cover"}
                         priority={i === 0}
                       />
                     </div>

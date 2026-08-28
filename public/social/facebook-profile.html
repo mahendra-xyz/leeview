@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Bebas+Neue&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { min-height: 100%; display: flex; align-items: center; justify-content: center; background: #111; padding: 40px; }
+  body { width: 400px; height: 400px; overflow: hidden; font-family: 'Inter', sans-serif; flex-shrink: 0; }
+
+  .wrap {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(150deg, #0a1a30 0%, #1B3461 55%, #0c2545 100%);
+    overflow: hidden;
+  }
+
+  .grid {
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .bar-left   { position: absolute; left: 0; top: 0; bottom: 0; width: 5px; background: #2F7A2F; }
+  .bar-right  { position: absolute; right: 0; top: 0; bottom: 0; width: 5px; background: #2F7A2F; }
+  .bar-top    { position: absolute; top: 0; left: 0; right: 0; height: 5px; background: #2F7A2F; }
+  .bar-bottom { position: absolute; bottom: 0; left: 0; right: 0; height: 5px; background: #2F7A2F; }
+
+  .circle1 {
+    position: absolute;
+    right: -60px;
+    top: -60px;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: 36px solid rgba(47,122,47,0.08);
+  }
+
+  .circle2 {
+    position: absolute;
+    left: -40px;
+    bottom: -50px;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 24px solid rgba(255,255,255,0.025);
+  }
+
+  .content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 86px;
+    color: #fff;
+    letter-spacing: 0.04em;
+    line-height: 1;
+  }
+
+  .divider {
+    width: 32px;
+    height: 2px;
+    background: #2F7A2F;
+    margin: 8px 0;
+  }
+
+  .logo-sub {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #7ec87e;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="grid"></div>
+  <div class="bar-left"></div>
+  <div class="bar-right"></div>
+  <div class="bar-top"></div>
+  <div class="bar-bottom"></div>
+  <div class="circle1"></div>
+  <div class="circle2"></div>
+
+  <div class="content">
+    <div class="logo-name">Leeview</div>
+    <div class="divider"></div>
+    <div class="logo-sub">Property Maintenance</div>
+  </div>
+</div>
+</body>
+</html>
