@@ -18,6 +18,10 @@ export const images: StockImage[] = [
   { url: "/images/work/roof-replacement-before-after.jpg", alt: "Roof replacement — before and after", tags: ["property-maintenance"], real: true },
   { url: "/images/work/kitchen-renovation.png", alt: "Kitchen renovation — before and after", tags: ["interior-renovations"], real: true },
 
+  { url: "/images/work/exterior-painting-1.jpg", alt: "Exterior painting in progress — side wall render", tags: ["painting", "property-maintenance"], real: true },
+  { url: "/images/work/exterior-painting-2.jpg", alt: "Exterior house painting — scaffolding up, work underway", tags: ["painting", "property-maintenance"], real: true },
+  { url: "/images/work/exterior-painting-3.jpg", alt: "Exterior house painting completed — fresh render finish", tags: ["painting", "property-maintenance"], real: true },
+
   // --- Stock (downloaded locally, no people, used in service cards/pages only) ---
   // Painting
   { url: "/images/stock/paint-brushes.jpg", alt: "Paint brushes close-up", tags: ["painting"] },
