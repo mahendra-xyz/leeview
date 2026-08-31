@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, Star } from "lucide-react";
 import { PHONE_DISPLAY, EMAIL, SOCIALS } from "@/lib/constants";
 import { services } from "@/lib/services";
 
@@ -106,22 +106,22 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Quick Links */}
+          {/* Review */}
           <div>
-            <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/40 mb-5">Quick Links</h4>
-            <ul className="space-y-2.5">
-              {[
-                { label: "Home", href: "/#home" },
-                { label: "Services", href: "/#our-services" },
-                { label: "Contact", href: "/contact" },
-              ].map(({ label, href }) => (
-                <li key={label}>
-                  <a href={href} className="text-xs text-blue-200 hover:text-white transition-colors uppercase tracking-wider font-semibold">
-                    {label}
-                  </a>
-                </li>
-              ))}
-            </ul>
+            <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/40 mb-5">Enjoyed Our Work?</h4>
+            <p className="text-xs text-blue-300 leading-relaxed mb-5">
+              A quick review goes a long way — it helps local homeowners in Cork find us.
+            </p>
+            <a
+              href={SOCIALS.googleReview}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2.5 px-4 py-3 text-xs font-bold text-white rounded-sm transition-opacity hover:opacity-90"
+              style={{ backgroundColor: "var(--green)" }}
+            >
+              <Star size={13} />
+              Write a Google Review
+            </a>
           </div>
 
         </div>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Bebas+Neue&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { min-height: 100%; display: flex; align-items: center; justify-content: center; background: #111; padding: 40px; }
+  body { width: 720px; height: 720px; overflow: hidden; font-family: 'Inter', sans-serif; flex-shrink: 0; }
+
+  .wrap {
+    width: 720px;
+    height: 720px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(150deg, #0a1a30 0%, #1B3461 55%, #0c2545 100%);
+    overflow: hidden;
+  }
+
+  .grid {
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 72px 72px;
+  }
+
+  .bar-left   { position: absolute; left: 0; top: 0; bottom: 0; width: 9px; background: #2F7A2F; }
+  .bar-right  { position: absolute; right: 0; top: 0; bottom: 0; width: 9px; background: #2F7A2F; }
+  .bar-top    { position: absolute; top: 0; left: 0; right: 0; height: 9px; background: #2F7A2F; }
+  .bar-bottom { position: absolute; bottom: 0; left: 0; right: 0; height: 9px; background: #2F7A2F; }
+
+  .circle1 {
+    position: absolute;
+    right: -110px;
+    top: -110px;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    border: 65px solid rgba(47,122,47,0.08);
+  }
+
+  .circle2 {
+    position: absolute;
+    left: -70px;
+    bottom: -90px;
+    width: 290px;
+    height: 290px;
+    border-radius: 50%;
+    border: 44px solid rgba(255,255,255,0.025);
+  }
+
+  .content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 156px;
+    color: #fff;
+    letter-spacing: 0.04em;
+    line-height: 1;
+  }
+
+  .divider {
+    width: 58px;
+    height: 3px;
+    background: #2F7A2F;
+    margin: 14px 0;
+  }
+
+  .logo-sub {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #7ec87e;
+  }
+
+  .details {
+    margin-top: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .detail {
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.45);
+    letter-spacing: 0.06em;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="grid"></div>
+  <div class="bar-left"></div>
+  <div class="bar-right"></div>
+  <div class="bar-top"></div>
+  <div class="bar-bottom"></div>
+  <div class="circle1"></div>
+  <div class="circle2"></div>
+
+  <div class="content">
+    <div class="logo-name">Leeview</div>
+    <div class="divider"></div>
+    <div class="logo-sub">Property Maintenance</div>
+    <div class="details">
+      <div class="detail">085 181 8163</div>
+      <div class="detail">leeviewpropertymaintenance.ie</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
