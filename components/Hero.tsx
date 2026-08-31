@@ -49,7 +49,7 @@ export default function Hero() {
             <div>
               <div className="flex items-center gap-3 mb-8">
                 <div className="h-px w-8" style={{ backgroundColor: "var(--green)" }} />
-                <span className="text-xs font-bold uppercase tracking-[0.2em]" style={{ color: "var(--green)" }}>
+                <span className="blink text-xs font-bold uppercase tracking-[0.2em]" style={{ color: "#7ec87e" }}>
                   Cork &amp; Surrounding Areas
                 </span>
               </div>
@@ -103,11 +103,11 @@ export default function Hero() {
             </div>
 
             {/* Right — Cycling image with frame */}
-            <div className="hidden lg:flex items-center justify-end">
+            <div className="flex items-center lg:justify-end order-last lg:order-none">
               <div className="relative" style={{ width: "100%", maxWidth: "520px" }}>
-                {/* Green offset frame */}
+                {/* Green offset frame — desktop only */}
                 <div
-                  className="absolute"
+                  className="absolute hidden lg:block"
                   style={{
                     bottom: "-18px",
                     right: "-18px",
@@ -118,8 +118,8 @@ export default function Hero() {
                 />
                 {/* Image slideshow */}
                 <div
-                  className="relative overflow-hidden"
-                  style={{ height: "420px", border: "1px solid rgba(255,255,255,0.08)" }}
+                  className="relative overflow-hidden h-64 lg:h-[420px]"
+                  style={{ border: "1px solid rgba(255,255,255,0.08)" }}
                 >
                   {heroImages.map((img, i) => (
                     <div

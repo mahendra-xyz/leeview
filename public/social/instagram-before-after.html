@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Bebas+Neue&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { min-height: 100%; display: flex; align-items: center; justify-content: center; background: #111; padding: 40px; }
+  body { width: 1080px; height: 1080px; overflow: hidden; font-family: 'Inter', sans-serif; flex-shrink: 0; position: relative; }
+
+  .wrap {
+    width: 1080px;
+    height: 1080px;
+    position: relative;
+    overflow: hidden;
+    background: #0c1f3d;
+  }
+
+  /* Two halves — swap background images here */
+  .half {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+  }
+  .half.before {
+    left: 0;
+    background: #1a1a1a url('') center/cover no-repeat;
+    /* ↑ paste before image URL or path */
+    filter: grayscale(30%);
+  }
+  .half.after {
+    right: 0;
+    background: #2a3a2a url('') center/cover no-repeat;
+    /* ↑ paste after image URL or path */
+  }
+
+  /* Dark overlay on each half */
+  .half::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+  }
+
+  /* BEFORE / AFTER labels */
+  .label {
+    position: absolute;
+    top: 48px;
+    z-index: 20;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+  }
+  .label.before { left: 48px; }
+  .label.after  { right: 48px; }
+
+  /* Green bars */
+  .bar-top    { position: absolute; top: 0; left: 0; right: 0; height: 7px; background: #2F7A2F; z-index: 30; }
+  .bar-bottom { position: absolute; bottom: 0; left: 0; right: 0; height: 7px; background: #2F7A2F; z-index: 30; }
+  .bar-left   { position: absolute; left: 0; top: 0; bottom: 0; width: 7px; background: #2F7A2F; z-index: 30; }
+  .bar-right  { position: absolute; right: 0; top: 0; bottom: 0; width: 7px; background: #2F7A2F; z-index: 30; }
+
+  /* Bottom branding strip */
+  .brand-strip {
+    position: absolute;
+    bottom: 7px;
+    left: 7px;
+    right: 7px;
+    height: 140px;
+    background: linear-gradient(to top, rgba(12,31,61,0.98) 70%, transparent 100%);
+    z-index: 20;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 0 40px 28px;
+  }
+
+  .brand-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 42px;
+    color: #fff;
+    letter-spacing: 0.04em;
+    line-height: 1;
+  }
+  .brand-sub {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #7ec87e;
+    margin-top: 2px;
+  }
+
+  .brand-right {
+    text-align: right;
+  }
+  .brand-phone {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    color: #fff;
+    letter-spacing: 0.06em;
+  }
+  .brand-url {
+    font-size: 22px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.8);
+    letter-spacing: 0.03em;
+    margin-top: 6px;
+  }
+
+  /* Centre badge */
+  .badge {
+    position: absolute;
+    bottom: 118px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 30;
+    background: #2F7A2F;
+    padding: 10px 22px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .badge-text {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    color: #fff;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+  }
+  .badge-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.4);
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="half before"></div>
+  <div class="half after"></div>
+
+  <div class="bar-top"></div>
+  <div class="bar-bottom"></div>
+  <div class="bar-left"></div>
+  <div class="bar-right"></div>
+
+  <div class="label before">Before</div>
+  <div class="label after">After</div>
+
+  <div class="badge">
+    <span class="badge-text">See the difference</span>
+    <div class="badge-dot"></div>
+    <span class="badge-text">Cork & surrounds</span>
+  </div>
+
+  <div class="brand-strip">
+    <div>
+      <div class="brand-name">Leeview</div>
+      <div class="brand-sub">Property Maintenance</div>
+    </div>
+    <div style="text-align:center;">
+      <div class="brand-url">leeviewpropertymaintenance.ie</div>
+    </div>
+    <div class="brand-right">
+      <div class="brand-phone">085 181 8163</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

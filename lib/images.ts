@@ -53,7 +53,7 @@ export const images: StockImage[] = [
 export const heroImages = [
   { url: "/images/work/driveway-pressure-wash.png", alt: "Driveway pressure washing — before and after", fit: "cover" as const },
   { url: "/images/work/garden-landscaping.png", alt: "Garden landscaping transformation — before and after", fit: "contain" as const },
-  { url: "/images/work/roof-replacement-after.png", alt: "Roof replacement completed with new slate tiles", fit: "contain" as const },
+  { url: "/images/work/kitchen-renovation.png", alt: "Kitchen renovation — before and after", fit: "cover" as const },
   { url: "/images/work/hedge-tree-work.png", alt: "Hedge trimming and tree surgery — before and after", fit: "cover" as const },
 ];
 
