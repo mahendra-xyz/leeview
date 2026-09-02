@@ -26,7 +26,7 @@ export default function Services() {
           </div>
           <div>
             <p className="text-gray-500 text-sm leading-relaxed">
-              From a fresh coat of paint to full garden overhauls — we cover everything your property needs, done properly.
+              From a fresh coat of paint to full garden overhauls, we cover everything your property needs, done properly.
             </p>
           </div>
         </div>
@@ -110,7 +110,7 @@ export default function Services() {
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-between gap-4 p-8 border border-gray-100 bg-gray-50">
           <div>
             <p className="font-bold text-gray-900 text-sm">Don't see what you need?</p>
-            <p className="text-gray-500 text-xs mt-0.5">We handle a wide range of jobs — just ask.</p>
+            <p className="text-gray-500 text-xs mt-0.5">We handle a wide range of jobs, just ask.</p>
           </div>
           <a
             href="#contact-us"

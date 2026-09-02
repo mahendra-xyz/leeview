@@ -110,7 +110,7 @@ export default function Footer() {
           <div>
             <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/40 mb-5">Enjoyed Our Work?</h4>
             <p className="text-xs text-blue-300 leading-relaxed mb-5">
-              A quick review goes a long way — it helps local homeowners in Cork find us.
+              A quick review goes a long way. It helps local homeowners in Cork find us.
             </p>
             <a
               href={SOCIALS.googleReview}

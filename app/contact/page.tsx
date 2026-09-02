@@ -6,7 +6,7 @@ import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Us — Free Quote",
+  title: "Contact Us | Free Quote",
   description: "Get a free no-obligation quote from Leeview Property Maintenance in Ballincollig, Cork. Call 085 181 8163 or send us a message and we'll get back to you fast.",
   alternates: { canonical: "https://leeviewpropertymaintenance.ie/contact" },
   openGraph: {

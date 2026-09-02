@@ -67,7 +67,7 @@ export default function Hero() {
 
               <div className="flex items-center gap-4 mb-6">
                 <div className="h-px flex-1 max-w-[80px]" style={{ backgroundColor: "var(--green)" }} />
-                <p className="text-blue-200 text-sm italic">Exceptional attention to detail — every time.</p>
+                <p className="text-blue-200 text-sm italic">Exceptional attention to detail, every time.</p>
               </div>
 
               <div className="flex flex-wrap gap-2 mb-10">

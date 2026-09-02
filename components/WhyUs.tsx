@@ -14,7 +14,7 @@ const reasons = [
   {
     icon: MessageCircle,
     title: "Free, No-Obligation Quotes",
-    body: "Tell us what you need and we'll give you a straight answer on price — no hidden costs, no pressure.",
+    body: "Tell us what you need and we'll give you a straight answer on price. No hidden costs, no pressure.",
   },
   {
     icon: Clock,

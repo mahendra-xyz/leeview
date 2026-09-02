@@ -56,7 +56,7 @@ export default function OGImage() {
               Property Maintenance
             </div>
             <div style={{ fontSize: "20px", color: "rgba(255,255,255,0.5)", marginTop: "8px" }}>
-              Keeping your property looking its best — every time.
+              Keeping your property looking its best, every time.
             </div>
           </div>
 

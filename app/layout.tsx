@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     template: "%s | Leeview Property Maintenance Cork",
   },
   description:
-    "Leeview Property Maintenance — trusted home renovation and property maintenance company in Ballincollig, Cork. Garden maintenance, painting, pressure washing, hedge cutting, fencing, interior renovations and more. Fully insured. Free quote.",
+    "Leeview Property Maintenance, trusted home renovation and property maintenance company in Ballincollig, Cork. Garden maintenance, painting, pressure washing, hedge cutting, fencing, interior renovations and more. Fully insured. Free quote.",
   keywords: [
     "property maintenance Cork",
     "property maintenance Ballincollig",
@@ -82,7 +82,7 @@ const localBusinessSchema = {
   email: EMAIL,
   image: `${SITE_URL}/og.jpg`,
   description:
-    "Leeview Property Maintenance — trusted home renovation and property maintenance in Ballincollig and across Cork. Garden maintenance, painting, pressure washing, hedge cutting, fencing, interior renovations and more. Fully insured.",
+    "Leeview Property Maintenance, trusted home renovation and property maintenance in Ballincollig and across Cork. Garden maintenance, painting, pressure washing, hedge cutting, fencing, interior renovations and more. Fully insured.",
   address: {
     "@type": "PostalAddress",
     addressLocality: ADDRESS.city,

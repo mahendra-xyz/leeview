@@ -13,7 +13,7 @@ function validate(form: FormData): Errors {
   if (!form.email.trim()) errors.email = "Email is required.";
   else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) errors.email = "Enter a valid email address.";
   if (!form.message.trim()) errors.message = "Please describe what you need.";
-  else if (form.message.length > 2000) errors.message = `${form.message.length}/2000 — too long.`;
+  else if (form.message.length > 2000) errors.message = `${form.message.length}/2000, too long.`;
   return errors;
 }
 
@@ -110,7 +110,7 @@ function FormBody({
           value={form.message}
           onChange={(e) => setForm({ ...form, message: e.target.value })}
           onBlur={() => touch("message")}
-          placeholder="Tell us about your project — what needs doing, where, any other details..."
+          placeholder="Tell us about your project: what needs doing, where, any other details..."
           className={`${inputClass(touched.message ? errors.message : undefined)} resize-none`}
         />
         <p className="mt-1 text-right text-[10px] text-gray-400">{form.message.length}/2000</p>
@@ -149,7 +149,7 @@ function Success({ onReset }: { onReset: () => void }) {
       <CheckCircle size={48} style={{ color: "var(--green)" }} className="mb-4" />
       <h3 className="text-xl font-bold text-gray-900 mb-2">Message Sent!</h3>
       <p className="text-gray-500 text-sm mb-1">We'll be in touch with your free quote shortly.</p>
-      <p className="text-gray-400 text-xs mb-6">Check your inbox — we've sent you a confirmation.</p>
+      <p className="text-gray-400 text-xs mb-6">Check your inbox, we've sent you a confirmation.</p>
       <button onClick={onReset} className="text-xs underline" style={{ color: "var(--navy)" }}>
         Send another message
       </button>
@@ -242,7 +242,7 @@ export default function ContactForm() {
             </div>
             <div className="p-4 border-l-4" style={{ borderColor: "var(--green)", backgroundColor: "rgba(47,122,47,0.12)" }}>
               <p className="text-sm font-bold text-white mb-1">Quality Work You Can Rely On</p>
-              <p className="text-xs leading-relaxed" style={{ color: "rgba(255,255,255,0.5)" }}>Exceptional attention to detail — every time.</p>
+              <p className="text-xs leading-relaxed" style={{ color: "rgba(255,255,255,0.5)" }}>Exceptional attention to detail, every time.</p>
             </div>
           </div>
 
