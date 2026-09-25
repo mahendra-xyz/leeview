@@ -1,7 +1,6 @@
 import { Phone, Mail, MapPin, Star } from "lucide-react";
 import { PHONE_DISPLAY, EMAIL, SOCIALS } from "@/lib/constants";
 import { services } from "@/lib/services";
-import Image from "next/image";
 import Link from "next/link";
 
 const FacebookIcon = () => (
@@ -31,13 +30,12 @@ export default function Footer() {
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="mb-4">
-              <Image
-                src="/images/logo.png"
-                alt="Leeview Property Maintenance"
-                width={160}
-                height={160}
-                className="h-20 w-auto brightness-0 invert"
-              />
+              <p className="text-5xl leading-none text-white" style={{ fontFamily: "var(--font-bebas)", letterSpacing: "0.03em" }}>
+                Leeview
+              </p>
+              <p className="text-[9px] font-bold tracking-[0.22em] uppercase mt-1" style={{ color: "#7ec87e" }}>
+                Property Maintenance
+              </p>
             </div>
             <p className="text-blue-300 text-xs leading-relaxed mb-6 max-w-[220px]">
               Trusted home renovation and property maintenance across Cork and Ballincollig.

@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { ContactFormOnly } from "@/components/ContactForm";
 import StatsBar from "@/components/StatsBar";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -36,22 +37,36 @@ export default function ContactPage() {
         <div className="absolute left-0 top-0 bottom-0 w-1" style={{ backgroundColor: "var(--green)" }} />
         <div className="absolute right-0 top-0 bottom-0 w-1" style={{ backgroundColor: "var(--green)" }} />
 
-        <div className="relative max-w-6xl mx-auto px-6 sm:px-10">
-          <div className="flex items-center gap-3 mb-4">
-            <div className="h-px w-6" style={{ backgroundColor: "var(--green)" }} />
-            <span className="text-xs font-bold uppercase tracking-[0.2em]" style={{ color: "var(--green)" }}>
-              Get In Touch
-            </span>
+        <div className="relative max-w-6xl mx-auto px-6 sm:px-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10">
+          <div>
+            <div className="flex items-center gap-3 mb-4">
+              <div className="h-px w-6" style={{ backgroundColor: "var(--green)" }} />
+              <span className="text-xs font-bold uppercase tracking-[0.2em]" style={{ color: "var(--green)" }}>
+                Get In Touch
+              </span>
+            </div>
+            <h1
+              className="text-5xl sm:text-6xl lg:text-7xl leading-none text-white mb-4"
+              style={{ fontFamily: "var(--font-bebas)", letterSpacing: "0.02em" }}
+            >
+              Contact Us
+            </h1>
+            <p className="text-blue-200 text-base max-w-xl leading-relaxed">
+              Request a free, no-obligation quote or just ask us a question. We'll get back to you fast.
+            </p>
           </div>
-          <h1
-            className="text-5xl sm:text-6xl lg:text-7xl leading-none text-white mb-4"
-            style={{ fontFamily: "var(--font-bebas)", letterSpacing: "0.02em" }}
-          >
-            Contact Us
-          </h1>
-          <p className="text-blue-200 text-base max-w-xl leading-relaxed">
-            Request a free, no-obligation quote or just ask us a question. We'll get back to you fast.
-          </p>
+
+          {/* Logo artwork */}
+          <div className="flex-shrink-0 opacity-90">
+            <Image
+              src="/images/logo.png"
+              alt="Leeview Property Maintenance"
+              width={220}
+              height={220}
+              className="brightness-0 invert w-44 sm:w-52 lg:w-56"
+              priority
+            />
+          </div>
         </div>
       </section>
 

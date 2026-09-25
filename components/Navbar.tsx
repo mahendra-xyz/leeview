@@ -3,7 +3,6 @@ import { Phone, Menu, X, ChevronDown } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import { services } from "@/lib/services";
 import Link from "next/link";
-import Image from "next/image";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -46,15 +45,13 @@ export default function Navbar() {
 
       <div className="max-w-6xl mx-auto px-6 sm:px-10 h-16 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center">
-          <Image
-            src="/images/logo.png"
-            alt="Leeview Property Maintenance"
-            width={120}
-            height={120}
-            className="h-12 w-auto"
-            priority
-          />
+        <Link href="/" className="flex flex-col leading-tight">
+          <span className="text-3xl leading-none text-white" style={{ fontFamily: "var(--font-bebas)", letterSpacing: "0.04em" }}>
+            Leeview
+          </span>
+          <span className="text-[9px] font-bold tracking-[0.22em] uppercase" style={{ color: "#7ec87e" }}>
+            Property Maintenance
+          </span>
         </Link>
 
         {/* Desktop nav */}
