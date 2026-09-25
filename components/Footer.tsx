@@ -1,6 +1,8 @@
 import { Phone, Mail, MapPin, Star } from "lucide-react";
 import { PHONE_DISPLAY, EMAIL, SOCIALS } from "@/lib/constants";
 import { services } from "@/lib/services";
+import Image from "next/image";
+import Link from "next/link";
 
 const FacebookIcon = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" width={18} height={18} aria-hidden="true">
@@ -29,12 +31,13 @@ export default function Footer() {
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="mb-4">
-              <p className="text-5xl leading-none text-white" style={{ fontFamily: "var(--font-bebas)", letterSpacing: "0.03em" }}>
-                Leeview
-              </p>
-              <p className="text-[9px] font-bold tracking-[0.22em] uppercase mt-1" style={{ color: "#7ec87e" }}>
-                Property Maintenance
-              </p>
+              <Image
+                src="/images/logo.png"
+                alt="Leeview Property Maintenance"
+                width={160}
+                height={160}
+                className="h-20 w-auto brightness-0 invert"
+              />
             </div>
             <p className="text-blue-300 text-xs leading-relaxed mb-6 max-w-[220px]">
               Trusted home renovation and property maintenance across Cork and Ballincollig.
@@ -128,16 +131,20 @@ export default function Footer() {
 
         {/* Bottom */}
         <div
-          className="pt-6 border-t flex flex-col sm:flex-row justify-between items-center gap-2"
+          className="pt-6 border-t flex flex-col sm:flex-row justify-between items-center gap-3"
           style={{ borderColor: "rgba(255,255,255,0.07)" }}
         >
           <p className="text-[10px] text-white/30">© {new Date().getFullYear()} Leeview Property Maintenance. All rights reserved.</p>
-          <p className="text-[10px] text-white/30">
-            Built by{" "}
-            <a href="https://consultqualia.com" className="hover:text-white/60 transition-colors">
-              ConsultQualia
-            </a>
-          </p>
+          <div className="flex items-center gap-4">
+            <Link href="/privacy" className="text-[10px] text-white/30 hover:text-white/60 transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="text-[10px] text-white/30 hover:text-white/60 transition-colors">Terms</Link>
+            <p className="text-[10px] text-white/30">
+              Built by{" "}
+              <a href="https://consultqualia.com" className="hover:text-white/60 transition-colors">
+                ConsultQualia
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>
