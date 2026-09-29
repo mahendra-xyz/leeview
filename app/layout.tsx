@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Bebas_Neue } from "next/font/google";
+import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { SITE_URL, SITE_NAME, PHONE, EMAIL, ADDRESS } from "@/lib/constants";
 
@@ -137,7 +139,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
       </head>
-      <body className={`${inter.variable} ${bebas.variable} ${inter.className}`}>{children}</body>
+      <body className={`${inter.variable} ${bebas.variable} ${inter.className}`}>
+        {children}
+        <Analytics />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18457833957"
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads" strategy="afterInteractive">{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-18457833957');
+        `}</Script>
+      </body>
     </html>
   );
 }

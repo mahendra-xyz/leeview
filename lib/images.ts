@@ -11,7 +11,7 @@ export type StockImage = {
 
 export const images: StockImage[] = [
   // --- Real job photos (preferred, shown first) ---
-  { url: "/images/work/driveway-pressure-wash.png", alt: "Driveway pressure washing — before and after", tags: ["pressure-washing", "property-maintenance"], real: true },
+  { url: "/images/work/driveway-pressure-wash.png", alt: "Driveway pressure washing — before and after", tags: ["pressure-washing"], real: true },
   { url: "/images/work/garden-landscaping.png", alt: "Garden landscaping transformation — before and after", tags: ["garden-maintenance", "outdoor-improvements"], real: true },
   { url: "/images/work/hedge-tree-work.png", alt: "Hedge trimming and tree surgery — before and after", tags: ["hedge-cutting-tree-work", "garden-maintenance"], real: true },
   { url: "/images/work/tree-surgery.png", alt: "Tree surgery — before and after", tags: ["hedge-cutting-tree-work"], real: true },

@@ -181,6 +181,10 @@ function useForm() {
       if (res.ok) {
         setStatus("success");
         setForm({ name: "", email: "", phone: "", message: "" });
+        // Google Ads conversion: Contact
+        if (typeof window !== "undefined" && typeof (window as any).gtag === "function") {
+          (window as any).gtag("event", "conversion", { send_to: "AW-18457833957/zZapCML0lIodEOXjsOFE" });
+        }
       } else {
         setStatus("error");
         setErrorMsg(data.error ?? "Something went wrong. Please try again.");

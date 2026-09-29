@@ -46,7 +46,7 @@ export default function TransferPage() {
             <Link href={SOCIALS.instagram}>instagram.com/leeview.property.maintenance</Link>
           </Item>
           <Item label="Facebook">
-            <Link href={SOCIALS.facebook}>facebook.com/profile.php?id=61593635473473</Link>
+            <Link href={SOCIALS.facebook}>facebook.com/profile.php?id=61594705281496</Link>
           </Item>
           <p style={note}>
             Post once or twice a week, even just a photo with a short caption. It keeps you visible and helps your Google ranking over time.
