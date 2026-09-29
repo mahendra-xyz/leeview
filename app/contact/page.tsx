@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ContactFormOnly } from "@/components/ContactForm";
 import StatsBar from "@/components/StatsBar";
+import PhoneLink from "@/components/PhoneLink";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import Image from "next/image";
 import type { Metadata } from "next";
@@ -59,7 +60,7 @@ export default function ContactPage() {
           {/* Logo artwork */}
           <div className="flex-shrink-0 opacity-90">
             <Image
-              src="/images/logo.png"
+              src="/images/logo.jpg"
               alt="Leeview Property Maintenance"
               width={220}
               height={220}
@@ -86,7 +87,7 @@ export default function ContactPage() {
                 </div>
                 <ul className="space-y-5">
                   <li>
-                    <a href="tel:+353851818163" className="flex items-start gap-4 group">
+                    <PhoneLink className="flex items-start gap-4 group">
                       <div className="w-10 h-10 rounded-sm flex items-center justify-center flex-shrink-0" style={{ backgroundColor: "var(--navy)", color: "#fff" }}>
                         <Phone size={16} />
                       </div>
@@ -94,7 +95,7 @@ export default function ContactPage() {
                         <p className="text-[10px] font-bold uppercase tracking-wider text-gray-400 mb-0.5">Phone</p>
                         <p className="text-sm font-bold text-gray-900 group-hover:underline">085 181 8163</p>
                       </div>
-                    </a>
+                    </PhoneLink>
                   </li>
                   <li>
                     <a href="mailto:patrick.leeview@gmail.com" className="flex items-start gap-4 group">

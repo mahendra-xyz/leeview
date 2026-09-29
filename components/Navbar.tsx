@@ -1,5 +1,6 @@
 "use client";
 import { Phone, Menu, X, ChevronDown } from "lucide-react";
+import { trackPhoneClick } from "@/lib/gtag";
 import { useState, useEffect, useRef } from "react";
 import { services } from "@/lib/services";
 import Link from "next/link";
@@ -149,7 +150,7 @@ export default function Navbar() {
 
         {/* Phone + CTA */}
         <div className="hidden md:flex items-center gap-5">
-          <a href="tel:+353851818163" className="flex items-center gap-2 text-xs font-bold text-white/80 hover:text-white transition-colors">
+          <a href="tel:+353851818163" onClick={trackPhoneClick} className="flex items-center gap-2 text-xs font-bold text-white/80 hover:text-white transition-colors">
             <Phone size={13} />
             085 181 8163
           </a>
@@ -218,7 +219,7 @@ export default function Navbar() {
           </div>
 
           <div className="pt-4 border-t flex flex-col gap-3" style={{ borderColor: "rgba(255,255,255,0.07)" }}>
-            <a href="tel:+353851818163" className="flex items-center gap-2 text-sm font-bold text-white">
+            <a href="tel:+353851818163" onClick={trackPhoneClick} className="flex items-center gap-2 text-sm font-bold text-white">
               <Phone size={14} />
               085 181 8163
             </a>

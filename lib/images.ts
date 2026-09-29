@@ -11,12 +11,12 @@ export type StockImage = {
 
 export const images: StockImage[] = [
   // --- Real job photos (preferred, shown first) ---
-  { url: "/images/work/driveway-pressure-wash.png", alt: "Driveway pressure washing — before and after", tags: ["pressure-washing"], real: true },
-  { url: "/images/work/garden-landscaping.png", alt: "Garden landscaping transformation — before and after", tags: ["garden-maintenance", "outdoor-improvements"], real: true },
-  { url: "/images/work/hedge-tree-work.png", alt: "Hedge trimming and tree surgery — before and after", tags: ["hedge-cutting-tree-work", "garden-maintenance"], real: true },
-  { url: "/images/work/tree-surgery.png", alt: "Tree surgery — before and after", tags: ["hedge-cutting-tree-work"], real: true },
+  { url: "/images/work/driveway-pressure-wash.jpg", alt: "Driveway pressure washing — before and after", tags: ["pressure-washing"], real: true },
+  { url: "/images/work/garden-landscaping.jpg", alt: "Garden landscaping transformation — before and after", tags: ["garden-maintenance", "outdoor-improvements"], real: true },
+  { url: "/images/work/hedge-tree-work.jpg", alt: "Hedge trimming and tree surgery — before and after", tags: ["hedge-cutting-tree-work", "garden-maintenance"], real: true },
+  { url: "/images/work/tree-surgery.jpg", alt: "Tree surgery — before and after", tags: ["hedge-cutting-tree-work"], real: true },
   { url: "/images/work/roof-replacement-before-after.jpg", alt: "Roof replacement — before and after", tags: ["property-maintenance"], real: true },
-  { url: "/images/work/kitchen-renovation.png", alt: "Kitchen renovation — before and after", tags: ["interior-renovations"], real: true },
+  { url: "/images/work/kitchen-renovation.jpg", alt: "Kitchen renovation — before and after", tags: ["interior-renovations"], real: true },
 
   { url: "/images/work/exterior-painting-1.jpg", alt: "Exterior painting in progress — side wall render", tags: ["painting", "property-maintenance"], real: true },
   { url: "/images/work/exterior-painting-2.jpg", alt: "Exterior house painting — scaffolding up, work underway", tags: ["painting", "property-maintenance"], real: true },
@@ -51,10 +51,10 @@ export const images: StockImage[] = [
 
 // Hero grid images (homepage only) — real Leeview job photos (no people)
 export const heroImages = [
-  { url: "/images/work/driveway-pressure-wash.png", alt: "Driveway pressure washing — before and after", fit: "cover" as const },
-  { url: "/images/work/garden-landscaping.png", alt: "Garden landscaping transformation — before and after", fit: "contain" as const },
-  { url: "/images/work/kitchen-renovation.png", alt: "Kitchen renovation — before and after", fit: "cover" as const },
-  { url: "/images/work/hedge-tree-work.png", alt: "Hedge trimming and tree surgery — before and after", fit: "cover" as const },
+  { url: "/images/work/driveway-pressure-wash.jpg", alt: "Driveway pressure washing — before and after", fit: "cover" as const },
+  { url: "/images/work/garden-landscaping.jpg", alt: "Garden landscaping transformation — before and after", fit: "contain" as const },
+  { url: "/images/work/kitchen-renovation.jpg", alt: "Kitchen renovation — before and after", fit: "cover" as const },
+  { url: "/images/work/hedge-tree-work.jpg", alt: "Hedge trimming and tree surgery — before and after", fit: "cover" as const },
 ];
 
 // Helper: get all images approved for a specific service slug

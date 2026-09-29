@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { Phone, ArrowRight, MapPin } from "lucide-react";
+import { trackPhoneClick } from "@/lib/gtag";
 import Image from "next/image";
 import { heroImages } from "@/lib/images";
 
@@ -81,6 +82,7 @@ export default function Hero() {
               <div className="flex flex-col sm:flex-row gap-4 mb-10">
                 <a
                   href="tel:+353851818163"
+                  onClick={trackPhoneClick}
                   className="flex items-center justify-center gap-2 px-7 py-4 text-sm font-bold text-white rounded-sm transition-opacity hover:opacity-90"
                   style={{ backgroundColor: "var(--green)" }}
                 >

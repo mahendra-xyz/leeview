@@ -127,7 +127,11 @@ const localBusinessSchema = {
       itemOffered: { "@type": "Service", name },
     })),
   },
-  sameAs: [],
+  sameAs: [
+    "https://www.facebook.com/profile.php?id=61594705281496",
+    "https://www.instagram.com/leeview.property.maintenance/",
+    "https://g.page/r/CbiefiMwD3FfEBM/review",
+  ],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -142,14 +146,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`${inter.variable} ${bebas.variable} ${inter.className}`}>
         {children}
         <Analytics />
+        {/* Google tag — single script load covers Ads + unified GT tag */}
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-18457833957"
+          src="https://www.googletagmanager.com/gtag/js?id=GT-TX9THG6F"
           strategy="afterInteractive"
         />
-        <Script id="google-ads" strategy="afterInteractive">{`
+        <Script id="google-tags" strategy="afterInteractive">{`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
+          gtag('config', 'GT-TX9THG6F');
+          gtag('config', 'G-H8SJ7JL4KD');
           gtag('config', 'AW-18457833957');
         `}</Script>
       </body>

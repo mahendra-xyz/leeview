@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import { Phone, Mail, MapPin, Send, CheckCircle } from "lucide-react";
+import { trackPhoneClick } from "@/lib/gtag";
 
 type FormData = { name: string; email: string; phone: string; message: string };
 type Status = "idle" | "loading" | "success" | "error";
@@ -216,7 +217,7 @@ export default function ContactForm() {
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-10">
           <div className="lg:col-span-2 space-y-6">
             <div className="space-y-4">
-              <a href="tel:+353851818163" className="flex items-center gap-3 group">
+              <a href="tel:+353851818163" onClick={trackPhoneClick} className="flex items-center gap-3 group">
                 <div className="w-10 h-10 flex items-center justify-center flex-shrink-0" style={{ backgroundColor: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)" }}>
                   <Phone size={16} color="#7ec87e" />
                 </div>

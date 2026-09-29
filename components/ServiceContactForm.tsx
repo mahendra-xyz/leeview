@@ -1,6 +1,7 @@
 "use client";
 import { useState, useRef } from "react";
 import { Send, CheckCircle, Phone } from "lucide-react";
+import { trackPhoneClick } from "@/lib/gtag";
 
 export default function ServiceContactForm({ service }: { service: string }) {
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
@@ -128,6 +129,7 @@ export default function ServiceContactForm({ service }: { service: string }) {
           </div>
           <a
             href="tel:+353851818163"
+            onClick={trackPhoneClick}
             className="w-full flex items-center justify-center gap-2 py-2.5 text-sm font-bold border border-gray-200 rounded-sm hover:border-gray-400 transition-colors"
             style={{ color: "var(--navy)" }}
           >

@@ -1,4 +1,6 @@
+"use client";
 import { Phone, Mail, MapPin, Star } from "lucide-react";
+import { trackPhoneClick } from "@/lib/gtag";
 import { PHONE_DISPLAY, EMAIL, SOCIALS } from "@/lib/constants";
 import { services } from "@/lib/services";
 import Link from "next/link";
@@ -87,7 +89,7 @@ export default function Footer() {
             <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/40 mb-5">Contact</h4>
             <ul className="space-y-4">
               <li>
-                <a href={`tel:+353851818163`} className="flex items-center gap-3 text-xs text-blue-200 hover:text-white transition-colors">
+                <a href={`tel:+353851818163`} onClick={trackPhoneClick} className="flex items-center gap-3 text-xs text-blue-200 hover:text-white transition-colors">
                   <Phone size={13} className="flex-shrink-0" style={{ color: "#7ec87e" }} />
                   {PHONE_DISPLAY}
                 </a>
