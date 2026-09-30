@@ -65,7 +65,7 @@ function GoogleG() {
 
 export default function Reviews() {
   return (
-    <section className="py-20 bg-white border-t border-gray-100">
+    <section id="reviews" className="py-20 bg-white border-t border-gray-100">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
         {/* Header */}
