@@ -16,6 +16,8 @@ export const images: StockImage[] = [
   { url: "/images/work/hedge-tree-work.jpg", alt: "Hedge trimming and tree surgery — before and after", tags: ["hedge-cutting-tree-work", "garden-maintenance"], real: true },
   { url: "/images/work/tree-surgery.jpg", alt: "Tree surgery — before and after", tags: ["hedge-cutting-tree-work"], real: true },
   { url: "/images/work/roof-replacement-before-after.jpg", alt: "Roof replacement — before and after", tags: ["property-maintenance"], real: true },
+  { url: "/images/work/roof-repair-before.jpg", alt: "Roof repair — exposed structure before work", tags: ["property-maintenance"], real: true },
+  { url: "/images/work/roof-repair-after.jpg", alt: "Roof repair completed — tiles restored", tags: ["property-maintenance"], real: true },
   { url: "/images/work/kitchen-renovation.jpg", alt: "Kitchen renovation — before and after", tags: ["interior-renovations"], real: true },
 
   { url: "/images/work/exterior-painting-1.jpg", alt: "Exterior painting in progress — side wall render", tags: ["painting", "property-maintenance"], real: true },
