@@ -17,6 +17,21 @@ export async function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }));
 }
 
+const slugKeywords: Record<string, string[]> = {
+  "roof-repair": [
+    "roof repair Cork",
+    "roof repairs Cork",
+    "roofer Cork",
+    "leaking roof Cork",
+    "roof leak repair Cork",
+    "roof damage repair Cork",
+    "chimney repair Cork",
+    "slate roof repair Cork",
+    "roof repair Ballincollig",
+    "roofer near me Cork",
+  ],
+};
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const service = getService(slug);
@@ -24,7 +39,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${service.title} in Cork`,
     description: `${service.description.slice(0, 155)}`,
-    keywords: [
+    keywords: slugKeywords[slug] ?? [
       `${service.title.toLowerCase()} Cork`,
       `${service.title.toLowerCase()} Ballincollig`,
       `${service.title.toLowerCase()} near me`,

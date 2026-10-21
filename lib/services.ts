@@ -1,4 +1,4 @@
-import { Wrench, Paintbrush, Leaf, Scissors, Droplets, Fence, Hammer, Sun, Home, LucideIcon } from "lucide-react";
+import { Wrench, Paintbrush, Leaf, Scissors, Droplets, Fence, Hammer, Sun, Home, HardHat, LucideIcon } from "lucide-react";
 
 export type Service = {
   slug: string;
@@ -11,6 +11,23 @@ export type Service = {
 };
 
 export const services: Service[] = [
+  {
+    slug: "roof-repair",
+    title: "Roof Repair & Maintenance",
+    tagline: "Roof repairs, leak fixes, and chimney work across Cork.",
+    description:
+      "Professional roof repair and maintenance in Cork and Ballincollig. A damaged or leaking roof needs prompt attention before small problems become expensive ones. We repair all roof types — slated, tiled, and felt — fixing leaks, replacing damaged slates and tiles, repointing chimney stacks, and replacing worn roof felt. Fast response, quality materials, and work done to last.",
+    includes: [
+      "Roof leak detection and repair Cork",
+      "Slate and tile replacement",
+      "Roof felt replacement",
+      "Chimney repointing and repair",
+      "Ridge and hip tile re-bedding",
+      "Fascia, soffit, and gutter repairs",
+    ],
+    icon: HardHat,
+    gallery: 6,
+  },
   {
     slug: "property-maintenance",
     title: "Property Maintenance",
