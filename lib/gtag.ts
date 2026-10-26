@@ -5,11 +5,16 @@ declare global {
   }
 }
 
-export function trackPhoneClick() {
+export function trackPhoneClick(url?: string) {
   if (typeof window !== "undefined" && typeof window.gtag === "function") {
-    window.gtag("event", "phone_click", {
-      event_category: "contact",
-      event_label: "phone_number",
+    const callback = () => {
+      if (url) window.location.href = url;
+    };
+    window.gtag("event", "conversion", {
+      send_to: "AW-18457833957/U8lTCP3Ng6odEOXjsOFE",
+      value: 1.0,
+      currency: "EUR",
+      event_callback: callback,
     });
   }
 }

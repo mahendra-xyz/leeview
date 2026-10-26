@@ -158,6 +158,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           gtag('config', 'GT-TX9THG6F');
           gtag('config', 'G-H8SJ7JL4KD');
           gtag('config', 'AW-18457833957');
+          gtag('config', 'AW-18457833957/ikHnCIDOg6odEOXjsOFE', { 'phone_conversion_number': '085 181 8163' });
         `}</Script>
       </body>
     </html>
