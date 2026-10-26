@@ -32,13 +32,17 @@ const slugKeywords: Record<string, string[]> = {
   ],
 };
 
+const slugDescriptions: Record<string, string> = {
+  "roof-repair": "Professional roof repair in Cork & Ballincollig. We fix leaks, replace slates & tiles, repoint chimneys, and replace roof felt. Fast response, free quote.",
+};
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const service = getService(slug);
   if (!service) return {};
   return {
     title: `${service.title} in Cork`,
-    description: `${service.description.slice(0, 155)}`,
+    description: slugDescriptions[slug] ?? `${service.description.slice(0, 155)}`,
     keywords: slugKeywords[slug] ?? [
       `${service.title.toLowerCase()} Cork`,
       `${service.title.toLowerCase()} Ballincollig`,

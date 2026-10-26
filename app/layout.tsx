@@ -15,10 +15,15 @@ export const metadata: Metadata = {
     template: "%s | Leeview Property Maintenance Cork",
   },
   description:
-    "Leeview Property Maintenance, trusted home renovation and property maintenance company in Ballincollig, Cork. Garden maintenance, painting, pressure washing, hedge cutting, fencing, interior renovations and more. Fully insured. Free quote.",
+    "Leeview Property Maintenance, trusted property maintenance and home renovation company in Ballincollig, Cork. Roof repairs, painting, garden maintenance, pressure washing, hedge cutting, fencing, interior renovations and more. Fully insured. Free quote.",
   keywords: [
     "property maintenance Cork",
     "property maintenance Ballincollig",
+    "roof repair Cork",
+    "roof repairs Cork",
+    "roofer Cork",
+    "leaking roof Cork",
+    "chimney repair Cork",
     "home renovation Cork",
     "home renovations Cork",
     "interior renovation Cork",
@@ -54,7 +59,7 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     title: "Leeview Property Maintenance | Home Renovations & Garden Services Cork",
     description:
-      "Trusted property maintenance and home renovation company in Cork. Garden maintenance, painting, pressure washing, hedge cutting, interior renovations and more. Fully insured. Free quote.",
+      "Trusted property maintenance company in Cork. Roof repairs, painting, garden maintenance, pressure washing, hedge cutting, interior renovations and more. Fully insured. Free quote.",
     locale: "en_IE",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Leeview Property Maintenance Cork" }],
   },
@@ -113,6 +118,7 @@ const localBusinessSchema = {
     "@type": "OfferCatalog",
     name: "Property Maintenance Services",
     itemListElement: [
+      "Roof Repair and Maintenance Cork",
       "Property Maintenance Cork",
       "Painting and Decorating Cork",
       "Garden Maintenance Cork",
